@@ -21,3 +21,62 @@ Koans는 고민 없이 풀면, 큰 어려움 없이 전부 다 풀 수 있습니
 - [scope](https://velog.io/@gil0127/JS-%EC%8A%A4%EC%BD%94%ED%94%84-Scope)와 [closure](https://velog.io/@gil0127/JS-%ED%81%B4%EB%A1%9C%EC%A0%80)에 대해서 이해할 수 있다.
 - [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)와 rest parameter에 대해서 이해할 수 있다.
 - Koans는 Mocha, Chai를 기반으로 테스트를 작성했습니다. 이 두가지 프레임워크에 대해 스스로 공부해보세요.
+
+-------------
+
+# 스프린트를 진행하면서 배운점
+
+```js
+
+const poppedValue = arr.pop();
+    // 여기에는 지워진 value가 할당 된다.
+
+```
+
+```js
+
+'mastermind' in megalomaniac
+// megalomaniac라는 객체에 mastermind 라는 키 값이 존재하는지 true/false로 알 수 있다.
+
+```
+
+- Rest Parameter는 무엇을 넣은 배열로 만들어 버린다.
+```js
+// 단, rest parameter는 다른 매개 변수와 함께 사용할 경우 반드시 마지막에 사용해야 한다.
+    function getAllParams(required1, required2, ...args) {
+      return [required1, required2, args];
+    }
+```
+
+```js
+Object.keys(Obj1);
+// Obj1의 키 값들을 배열로 뽑아 낼 수 있다.
+
+Object.values(Obj1);
+// Obj1의 value값들을 배열로 뽑아 낼 수 있다.
+```
+
+```js
+
+// 솔직히, 이건 작동하게 하면 안 되는 거 아닌가?? 싶지만 일단 되니 알아두자...
+
+  it('객체의 단축(shorthand) 문법을 익힙니다', () => {
+    const name = '김코딩'
+    const age = 28
+
+    const person = {
+      name,
+      age,
+      level: 'Junior',
+    }
+    
+    const person2 = {
+      name,
+      age,
+      level: 'Junior2',
+    }
+    
+    expect(person).to.eql( { name: '김코딩', age: 28, level: 'Junior' } );
+    
+  	expect(person2).to.eql( { name: '김코딩', age: 28, level: 'Junior2' } );
+```
