@@ -1,4 +1,4 @@
-# sprint-javascript-koans
+# Sprint-javascript-koans
 
 ## Getting Started
 Koans를 브라우저에서 실행하는 것으로 과제를 시작할 수 있습니다.
